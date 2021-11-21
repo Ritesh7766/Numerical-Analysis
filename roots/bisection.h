@@ -1,3 +1,8 @@
+/*
+* Author - Ritesh Saha
+* Bisection method.
+*/
+
 #include <cmath>
 
 double bisection(double x0, double x1, double (*f)(double), double epsilon) {
