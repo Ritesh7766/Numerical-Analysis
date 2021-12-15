@@ -19,8 +19,8 @@ double f(double x) {
 }
 
 int main(int argc, char *argv[]) {
-	if (argc != 4) {
-		cout << "Usage: ./utility/csvGenerator2 %length% %number of csv files% %interval%" << endl;
+	if (argc != 3) {
+		cout << "Usage: ./utility/csvGenerator2 %length% %number of csv files%" << endl;
 		return 0;
 	}
 
@@ -39,11 +39,14 @@ int main(int argc, char *argv[]) {
 
 			csv << "x" << "," << "f(x)" << endl;
 
-			for (int i = 0; i < len; i++) {
+			for (int i = 1; i < len; i++) {
 				double x = unif(re);
 				double y = f(x);
 				csv << x << "," << y << endl;
 			}
+			double x = unif(re);
+			double y = f(x);
+			csv << x << "," << y;
 
 			csv.close();
 		}

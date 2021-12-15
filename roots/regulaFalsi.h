@@ -5,7 +5,7 @@
 
 #include <cmath>
 
-double regulaFalsi(double x0, double x1, double (*f)(double), double epsilon) {
+static double regulaFalsi(double x0, double x1, double (*f)(double), double epsilon) {
 	double prevroot = 0.0, root = 0.0;
 	do {
 		prevroot = root;

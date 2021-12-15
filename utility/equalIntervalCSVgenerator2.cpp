@@ -37,11 +37,15 @@ int main(int argc, char *argv[]) {
 
 			csv << "x" << "," << "f(x)" << endl;
 
-			for (int i = 0; i < len; i++) {
+			int i = 0;
+			for (; i < len; i++) {
 				double x = INITIAL_VAL + h * i;
 				double y = f(x);
 				csv << x << "," << y << endl;
 			}
+			double x = INITIAL_VAL + h * i;
+			double y = f(x);
+			csv << x << "," << y;
 
 			csv.close();
 		}

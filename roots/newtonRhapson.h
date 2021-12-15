@@ -5,7 +5,7 @@
 
 #include <cmath>
 
-double newtonRhapson(double x0, double (*f)(double), double (*df)(double), double epsilon) {
+static double newtonRhapson(double x0, double (*f)(double), double (*df)(double), double epsilon) {
 	double prevroot = 0.0;
 	do {
 		prevroot = x0;

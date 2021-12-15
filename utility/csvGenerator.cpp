@@ -34,11 +34,14 @@ int main(int argc, char *argv[]) {
 
 			csv << "x" << "," << "f(x)" << endl;
 
-			for (int i = 0; i < len; i++) {
+			for (int i = 1; i < len; i++) {
 				double x = unif(re);
 				double y = unif(re);
 				csv << x << "," << y << endl;
 			}
+			double x = unif(re);
+			double y = unif(re);
+			csv << x << "," << y;
 
 			csv.close();
 		}
