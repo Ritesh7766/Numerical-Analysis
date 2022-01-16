@@ -1,6 +1,6 @@
 from utils.CSVGenerator import write_csv
 from utils.config import MY_CONFIG
-#import numpy as np
+import numpy as np
 #from concurrent.futures import ThreadPoolExecutor
 
 
