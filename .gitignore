@@ -1,0 +1,5 @@
+/bin/*
+/lib/*
+/objs/*
+/test_cases/*
+*.ipynb
