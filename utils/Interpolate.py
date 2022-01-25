@@ -1,4 +1,5 @@
 import pandas as pd
+from utils.config import MY_CONFIG
 from utils.NewtonForward import generate_table, create_csv
 from ctypes import *
 
@@ -7,7 +8,7 @@ INTER = CDLL('./lib/libinterpol.so')
 
 
 def get_forward_table(file_name):
-	df = pd.read_csv(file_name)
+	df = pd.read_csv(f'{MY_CONFIG.ROOT}/{file_name}')
 	tab = generate_table(df['f(x)'])
 	create_csv(df, tab, f'NF_{file_name}')
 	val = df.iloc[0]

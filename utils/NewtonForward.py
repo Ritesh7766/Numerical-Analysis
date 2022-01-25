@@ -2,7 +2,6 @@
 
 from utils.config import MY_CONFIG
 
-
 def forward_difference(y):
 	vector = []
 	for i in range(len(y)-1):

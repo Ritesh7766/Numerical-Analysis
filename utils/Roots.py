@@ -24,7 +24,10 @@ ROOTS.csv_newton_rhapson.argtypes = [POINTER(c_double), C_FUNC, C_FUNC, c_double
 ROOTS.csv_newton_rhapson.restype = c_bool
 
 ROOTS.csv_regula_falsi.argtypes = [POINTER(c_double), POINTER(c_double), C_FUNC, c_double, POINTER(c_double), POINTER(c_double)]
-ROOTS.csv_newton_rhapson.restype = c_bool
+ROOTS.csv_regula_falsi.restype = c_bool
+
+ROOTS.csv_secant.argtypes = [POINTER(c_double), POINTER(c_double), C_FUNC, c_double, POINTER(c_double), POINTER(c_double)]
+ROOTS.csv_secant.restype = c_bool
 
 def bisection(x0, x1, func, epsilon):
 	return ROOTS.bisection(c_double(x0), c_double(x1), C_FUNC(func), c_double(epsilon))
